@@ -1,0 +1,4 @@
+GET /UCSD_Seal.png HTTP/1.1
+host: test
+connection: close
+

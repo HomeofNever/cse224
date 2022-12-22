@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+  server0:
+    image: cse224-netsort
+    environment:
+      SERVER_ID: 0
+      INPUT_FILE_PATH: dist/testcase1/input-0.dat
+      OUTPUT_FILE_PATH: dist/testcase1/output-0.dat
+      CONFIG_FILE_PATH: config/servers.yaml
+    volumes:
+      - ./src/dist:/CSE224/src/dist
+  server1:
+    image: cse224-netsort
+    environment:
+      SERVER_ID: 1
+      INPUT_FILE_PATH: dist/testcase1/input-1.dat
+      OUTPUT_FILE_PATH: dist/testcase1/output-1.dat
+      CONFIG_FILE_PATH: config/servers.yaml
+    volumes:
+      - ./src/dist:/CSE224/src/dist
+  server2:
+    image: cse224-netsort
+    environment:
+      SERVER_ID: 2
+      INPUT_FILE_PATH: dist/testcase1/input-2.dat
+      OUTPUT_FILE_PATH: dist/testcase1/output-2.dat
+      CONFIG_FILE_PATH: config/servers.yaml
+    volumes:
+      - ./src/dist:/CSE224/src/dist
+  server3:
+    image: cse224-netsort
+    environment:
+      SERVER_ID: 3
+      INPUT_FILE_PATH: dist/testcase1/input-3.dat
+      OUTPUT_FILE_PATH: dist/testcase1/output-3.dat
+      CONFIG_FILE_PATH: config/servers.yaml
+    volumes:
+      - ./src/dist:/CSE224/src/dist

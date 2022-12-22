@@ -1,0 +1,13 @@
+servers:
+  - serverId: 0
+    host: "server0"
+    port: "8080"
+  - serverId: 1
+    host: "server1"
+    port: "8080"
+  - serverId: 2
+    host: "server2"
+    port: "8080"
+  - serverId: 3
+    host: "server3"
+    port: "8080"

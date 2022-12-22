@@ -1,0 +1,21 @@
+version: '3.5'
+services:
+  server:
+    container_name: https-server
+    image: golang:1.14.4-alpine
+    volumes:
+      - ./server:/server
+    working_dir: /server
+    command: ash -c "./scripts/generate-certificate.sh && go run main.go"
+    ports:
+      - '8081:8081'
+  client:
+    container_name: https-client
+    image: alpine
+    volumes:
+      - ./client:/client
+      - ./server/certificates:/certificates
+    depends_on:
+      - server
+    working_dir: /client
+    command: ash -c "./scripts/trust-server-certificate.sh && ./get-server-home.sh"

@@ -1,0 +1,3 @@
+POST /notexist.html HTTP/1.0
+Host: test
+Connection: close
